@@ -1,0 +1,28 @@
+{
+	"manifest_version": 3,
+	"extension_id": "dominyone",
+	"name": "Dominyone",
+	"version": "1.1",
+
+	"description": "Memes",
+
+	"icons": {
+		"48": "icons/dominyone48.png",
+		"96": "icons/dominyone96.png"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["*://*.dominion.games/*"],
+			"js": ["dominyone.js"],
+			"world": "MAIN"
+		}
+	],
+
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "{f6c639b4-4aab-47c6-b979-a9800d779fa1}",
+			"strict_min_version": "42.0"
+		}
+	}
+}
